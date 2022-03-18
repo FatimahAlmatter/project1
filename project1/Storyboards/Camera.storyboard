@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FW5-jH-RSs">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Post-->
+        <scene sceneID="rJf-J8-it9">
+            <objects>
+                <viewController id="F64-g9-S4L" customClass="CameraViewController" customModule="project1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="22H-zI-8BJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvE-FS-OXL">
+                                <rect key="frame" x="0.0" y="88" width="414" height="162"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KFq-Q9-obd">
+                                        <rect key="frame" x="26" y="16" width="127" height="129"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="129" id="Gro-jy-KVw"/>
+                                            <constraint firstAttribute="width" constant="127" id="JWY-GF-mRh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xmp-Yq-4MK">
+                                        <rect key="frame" x="166" y="16" width="227" height="129"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xmp-Yq-4MK" secondAttribute="bottom" constant="17" id="4yD-dn-5Ez"/>
+                                    <constraint firstAttribute="trailing" secondItem="xmp-Yq-4MK" secondAttribute="trailing" constant="21" id="5Sh-FC-mGy"/>
+                                    <constraint firstAttribute="height" constant="162" id="C3j-QX-ykZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="KFq-Q9-obd" secondAttribute="bottom" constant="17" id="Db4-p7-BQh"/>
+                                    <constraint firstItem="KFq-Q9-obd" firstAttribute="leading" secondItem="rvE-FS-OXL" secondAttribute="leading" constant="26" id="K5M-fW-aUo"/>
+                                    <constraint firstItem="xmp-Yq-4MK" firstAttribute="leading" secondItem="KFq-Q9-obd" secondAttribute="trailing" constant="13" id="OuR-Uj-R7R"/>
+                                    <constraint firstItem="KFq-Q9-obd" firstAttribute="top" secondItem="rvE-FS-OXL" secondAttribute="top" constant="16" id="aNZ-hF-nlr"/>
+                                    <constraint firstItem="xmp-Yq-4MK" firstAttribute="top" secondItem="rvE-FS-OXL" secondAttribute="top" constant="16" id="y9t-fh-9fG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bTO-cj-idD"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rvE-FS-OXL" firstAttribute="trailing" secondItem="bTO-cj-idD" secondAttribute="trailing" id="DVf-T0-PhG"/>
+                            <constraint firstItem="rvE-FS-OXL" firstAttribute="top" secondItem="bTO-cj-idD" secondAttribute="top" id="m8Q-HZ-s9W"/>
+                            <constraint firstItem="rvE-FS-OXL" firstAttribute="leading" secondItem="bTO-cj-idD" secondAttribute="leading" id="yqx-Jm-XFL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Post" id="qJY-CX-TGW">
+                        <barButtonItem key="rightBarButtonItem" title="Share" style="done" id="Xwz-Mt-CzS">
+                            <connections>
+                                <action selector="sharePostBtn:" destination="F64-g9-S4L" id="CqV-4z-ZHq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="TextViewOutlet" destination="xmp-Yq-4MK" id="wl8-gS-XPh"/>
+                        <outlet property="postImgOutlet" destination="KFq-Q9-obd" id="hGc-d4-twE"/>
+                        <outlet property="shareBtnOutlet" destination="Xwz-Mt-CzS" id="EcR-yZ-hQG"/>
+                        <outlet property="textViewOutlet" destination="xmp-Yq-4MK" id="q6b-dA-aeX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="icZ-KK-oS1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3063.768115942029" y="1482.5892857142856"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="gYC-71-rky">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FW5-jH-RSs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Camera" image="camera" catalog="system" selectedImage="camera.fill" id="2FN-bw-cvH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WnH-pQ-aEH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="F64-g9-S4L" kind="relationship" relationship="rootViewController" id="m6w-mJ-9jU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15t-6P-yT5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2302.898550724638" y="1482.5892857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
