@@ -19,6 +19,7 @@ class PostModel {
     var imageSize : CGFloat?
     var VideoURL : String?
     
+    
 }
 
 extension PostModel {
